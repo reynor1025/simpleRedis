@@ -102,7 +102,7 @@
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>_DEBUG;_CONSOLE;_WINSOCK_DEPRECATED_NO_WARNINGS;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>false</ConformanceMode>
     </ClCompile>
     <Link>
@@ -127,15 +127,22 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\rediserver\sds.cpp" />
-    <ClCompile Include="..\..\rediserver\server.cpp" />
+    <ClCompile Include="adlist.cpp" />
     <ClCompile Include="dict.cpp" />
+    <ClCompile Include="redisClient.cpp" />
+    <ClCompile Include="redisDb.cpp" />
+    <ClCompile Include="sds.cpp" />
+    <ClCompile Include="server.cpp" />
     <ClCompile Include="simplec++.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\rediserver\sds.h" />
-    <ClInclude Include="..\..\rediserver\server.h" />
+    <ClInclude Include="adlist.h" />
     <ClInclude Include="dict.h" />
+    <ClInclude Include="redisClient.h" />
+    <ClInclude Include="redisDb.h" />
+    <ClInclude Include="redisServer.h" />
+    <ClInclude Include="server.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

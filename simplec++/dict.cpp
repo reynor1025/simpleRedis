@@ -2,37 +2,6 @@
 
 #include "dict.h"
 
-#define HASHSIZE 10
-unsigned int myHashFunction(char* key, int size) {
-	char* charkey = (char*)key;
-	unsigned int hash = 0;
-	for (; *charkey; ++charkey) {
-		hash = hash * 33 + *charkey;
-	}
-	return hash % size;
-}
-
-char* myKeyDup(char* key) {
-	return key;
-}
-
-char* myValDup(char* obj) {
-	return obj;
-}
-
-int myKeyCompare(char* key1, char* key2) {
-	char* charkey1 = (char*)key1;
-	char* charkey2 = (char*)key2;
-	return strcmp(charkey1, charkey2);
-}
-
-void myKeyDestructor(char* key) {
-	//free(key);
-}
-
-void myValDestructor(char* obj) {
-	//free(obj);
-}
 dict *createDict(dictType* dt, int hashSize)
 {
 	dict* dic = (dict*)malloc(sizeof(dict));
@@ -166,54 +135,85 @@ void dictRelease(dict* d)
 	/*	free(d->type);*/
 	free(d);
 }
-
-
-int main(){
-	dictType*type=(dictType*)malloc(sizeof(dictType));
-	type->hashFunction=myHashFunction;
-	type->keyDup=myKeyDup;
-	type->valDup=myValDup;
-	type->keyCompare=myKeyCompare;
-	type->keyDelete =myKeyDestructor;
-	type->valDelete =myValDestructor;
-	dict* d= createDict(type,HASHSIZE);
-
-	char*key1="sss";
-	char*value1="111";
-	bool result= insertDict(key1,value1, d);
-	if(result){
-		printf("insert1 success\n");
-	}else{
-		printf("insert1 fail\n");
-	}
-
-	char*key2="3sd";
-	char*value2="ddd";
-	result= insertDict(key2,value2,d);
-	if(result){
-		printf("insert2 success\n");
-	}else{
-		printf("insert2 fail\n");
-	}
-
-	char*key3="ddds";
-	char*value3="1ss";
-	result= insertDict(key3,value3, d);
-	if(result){
-		printf("insert3 success\n");
-	}else{
-		printf("insert3 fail\n");
-	}
-
-	char *value4=(char*)dictFetchValue(d,key3);
-	printf("---%s\n",value4);
-
-	dictDelete(d,key3);
-	value4=(char*)dictFetchValue(d,key3);
-	printf("---%s\n",value4);
-
-	dictRelease(d);
-	system("pause");
-	return 0;
-}
+//
+//#define HASHSIZE 10
+//unsigned int myHashFunction(char* key, int size) {
+//	char* charkey = (char*)key;
+//	unsigned int hash = 0;
+//	for (; *charkey; ++charkey) {
+//		hash = hash * 33 + *charkey;
+//	}
+//	return hash % size;
+//}
+//
+//char* myKeyDup(char* key) {
+//	return key;
+//}
+//
+//char* myValDup(char* obj) {
+//	return obj;
+//}
+//
+//int myKeyCompare(char* key1, char* key2) {
+//	char* charkey1 = (char*)key1;
+//	char* charkey2 = (char*)key2;
+//	return strcmp(charkey1, charkey2);
+//}
+//
+//void myKeyDestructor(char* key) {
+//	//free(key);
+//}
+//
+//void myValDestructor(char* obj) {
+//	//free(obj);
+//}
+//
+//int main(){
+//	dictType*type=(dictType*)malloc(sizeof(dictType));
+//	type->hashFunction=myHashFunction;
+//	type->keyDup=myKeyDup;
+//	type->valDup=myValDup;
+//	type->keyCompare=myKeyCompare;
+//	type->keyDelete =myKeyDestructor;
+//	type->valDelete =myValDestructor;
+//	dict* d= createDict(type,HASHSIZE);
+//
+//	char*key1="sss";
+//	char*value1="111";
+//	bool result= insertDict(key1,value1, d);
+//	if(result){
+//		printf("insert1 success\n");
+//	}else{
+//		printf("insert1 fail\n");
+//	}
+//
+//	char*key2="3sd";
+//	char*value2="ddd";
+//	result= insertDict(key2,value2,d);
+//	if(result){
+//		printf("insert2 success\n");
+//	}else{
+//		printf("insert2 fail\n");
+//	}
+//
+//	char*key3="ddds";
+//	char*value3="1ss";
+//	result= insertDict(key3,value3, d);
+//	if(result){
+//		printf("insert3 success\n");
+//	}else{
+//		printf("insert3 fail\n");
+//	}
+//
+//	char *value4=(char*)dictFetchValue(d,key3);
+//	printf("---%s\n",value4);
+//
+//	dictDelete(d,key3);
+//	value4=(char*)dictFetchValue(d,key3);
+//	printf("---%s\n",value4);
+//
+//	dictRelease(d);
+//	system("pause");
+//	return 0;
+//}
 

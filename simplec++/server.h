@@ -1,14 +1,27 @@
-//
-// Created by 703 on 2024/3/5.
-//
+#pragma once
+#include <WINSOCK2.H>
+#include "redisDb.h"
 
-#ifndef SIMPLEREDIS_SERVER_H
-#define SIMPLEREDIS_SERVER_H
+typedef struct redisServer{
+	SOCKET sListen;//¼àÌý
+	SOCKADDR_IN local;
+
+	int port;
+
+	redisDb**db;
+
+	int dbnum;
+
+}redisServer;
 
 
-class server {
-
-};
-
-
-#endif //SIMPLEREDIS_SERVER_H
+//void redisServerRelease(redisServer*SERVER){
+//	for(int i=0;i<SERVER->dbnum;i++){
+//		//if(SERVER->db[i]->dict->ht->table[0]==NULL)
+//		//printf("%d\n",i);
+//		
+//		redisDbRelease(SERVER->db[i]);
+//	}
+//	//free(server->db);
+//	//free(server);
+//}

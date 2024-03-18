@@ -18,13 +18,22 @@
     <ClCompile Include="simplec++.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\rediserver\sds.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\rediserver\server.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
     <ClCompile Include="dict.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="adlist.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="server.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="sds.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="redisDb.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="redisClient.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
@@ -32,10 +41,22 @@
     <ClInclude Include="..\..\rediserver\sds.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\rediserver\server.h">
+    <ClInclude Include="dict.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="dict.h">
+    <ClInclude Include="adlist.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="redisDb.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="redisClient.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="redisServer.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="server.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>

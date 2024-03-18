@@ -1,4 +1,7 @@
-C:\simpleredis\rediserver\sds.cpp;C:\simpleredis\simplec++\simplec++\x64\Debug\sds.obj
-C:\simpleredis\rediserver\server.cpp;C:\simpleredis\simplec++\simplec++\x64\Debug\server.obj
+C:\simpleredis\simplec++\simplec++\adlist.cpp;C:\simpleredis\simplec++\simplec++\x64\Debug\adlist.obj
 C:\simpleredis\simplec++\simplec++\dict.cpp;C:\simpleredis\simplec++\simplec++\x64\Debug\dict.obj
+C:\simpleredis\simplec++\simplec++\redisClient.cpp;C:\simpleredis\simplec++\simplec++\x64\Debug\redisClient.obj
+C:\simpleredis\simplec++\simplec++\redisDb.cpp;C:\simpleredis\simplec++\simplec++\x64\Debug\redisDb.obj
+C:\simpleredis\simplec++\simplec++\sds.cpp;C:\simpleredis\simplec++\simplec++\x64\Debug\sds.obj
+C:\simpleredis\simplec++\simplec++\server.cpp;C:\simpleredis\simplec++\simplec++\x64\Debug\server.obj
 C:\simpleredis\simplec++\simplec++\simplec++.cpp;C:\simpleredis\simplec++\simplec++\x64\Debug\simplec++.obj
